@@ -1,6 +1,12 @@
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.kmpNativeCoroutines)
+    alias(libs.plugins.jetbrainsCompose)
+    alias(libs.plugins.realmMongoDb)
+    alias(libs.plugins.ksp)
+
 }
 
 kotlin {
@@ -23,8 +29,15 @@ kotlin {
             // put your Multiplatform dependencies here
             implementation(libs.realm.library.base)
             implementation(libs.realm.library.sync)
+            implementation(libs.koin.core)
             api(libs.koin.core)
             implementation(libs.koin.test)
+        }
+        androidMain.dependencies {
+            compileOnly(libs.realm.library.base)
+            compileOnly(libs.realm.library.sync)
+            implementation(libs.koin.android)
+            implementation(libs.koin.androidx.compose)
         }
     }
 }
@@ -36,6 +49,6 @@ android {
         minSdk = libs.versions.android.minSdk.get().toInt()
     }
     dependencies {
-        implementation(libs.realm.library.base.android)
+        testImplementation(libs.junit)
     }
 }

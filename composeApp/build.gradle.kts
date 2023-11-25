@@ -4,8 +4,10 @@ import org.jetbrains.compose.ExperimentalComposeLibrary
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidApplication)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.jetbrainsCompose)
-    alias(libs.plugins.realmMongoDb)
+
 }
 
 kotlin {
@@ -83,8 +85,7 @@ android {
     }
     dependencies {
         debugImplementation(libs.compose.ui.tooling)
-        compileOnly(libs.realm.library.base)
-        compileOnly(libs.realm.library.sync)
+        testImplementation(libs.junit)
     }
 }
 

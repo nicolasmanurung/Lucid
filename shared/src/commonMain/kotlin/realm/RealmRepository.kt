@@ -20,7 +20,6 @@ class RealmRepository {
     private val appServiceInstance by lazy {
         // If logs are on app level then it set for everything ..
         val configuration = AppConfiguration.Builder("devicesync-bloka")
-            .log(LogLevel.ALL)
             .build()
         App.Companion.create(configuration)
     }

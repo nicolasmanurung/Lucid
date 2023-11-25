@@ -46,6 +46,7 @@ androidx-activity-compose = { module = "androidx.activity:activity-compose", ver
 realm-library-base = { group = "io.realm.kotlin", name = "library-base", version.ref = "realm" }
 realm-library-sync = { group = "io.realm.kotlin", name = "library-sync", version.ref = "realm" }
 realm-library-base-android = { group = "io.realm.kotlin", name = "library-base-android", version.ref = "realm" }
+realm-library-base-jvm = { group = "io.realm.kotlin", name = "library-base-jvm", version.ref = "realm" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koinCompose" }
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
