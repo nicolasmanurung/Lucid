@@ -23,6 +23,8 @@ kotlin {
             // put your Multiplatform dependencies here
             implementation(libs.realm.library.base)
             implementation(libs.realm.library.sync)
+            api(libs.koin.core)
+            implementation(libs.koin.test)
         }
     }
 }
