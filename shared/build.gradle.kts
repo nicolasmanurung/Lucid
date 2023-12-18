@@ -4,7 +4,6 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.kmpNativeCoroutines)
     alias(libs.plugins.jetbrainsCompose)
-    alias(libs.plugins.realmMongoDb)
     alias(libs.plugins.ksp)
 
 }
@@ -27,15 +26,13 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             // put your Multiplatform dependencies here
-            implementation(libs.realm.library.base)
-            implementation(libs.realm.library.sync)
             implementation(libs.koin.core)
             api(libs.koin.core)
             implementation(libs.koin.test)
+            implementation(libs.bundles.ktor.common)
+            implementation(libs.bundles.multiplatformSettings)
         }
         androidMain.dependencies {
-            compileOnly(libs.realm.library.base)
-            compileOnly(libs.realm.library.sync)
             implementation(libs.koin.android)
             implementation(libs.koin.androidx.compose)
         }
