@@ -1,7 +1,7 @@
 package di.feature
 
-import data.source.local.remote.LucidApi
-import data.source.local.remote.response.ApiException
+import data.source.remote.LucidApi
+import data.source.remote.response.ApiException
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.HttpClientEngine
 import io.ktor.client.plugins.ClientRequestException

@@ -1,4 +1,4 @@
-package data.source.local.remote.response
+package data.source.remote.response
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

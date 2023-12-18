@@ -1,7 +1,7 @@
 package di.feature
 
-import data.source.local.remote.LucidApi
-import data.source.local.remote.LucidApiClient
+import data.source.remote.LucidApi
+import data.source.remote.LucidApiClient
 import org.koin.dsl.module
 
 val lucidModule = module {
